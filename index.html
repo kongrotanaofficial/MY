@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="V6nS7to-sOgrPWYP7rLNUNWyF0sgpVa8WabgOed0Mag">
+  <meta name="csrf-token" content="iqKd0CwKJR8zYDrYV3JvOXyhvyhGTr8cg03ckzWs">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>លិខិតអញ្ជើញពិធីអាពាហ៍ពិពាហ៍ |គង់ រតនា និង សឿង ស្រីពេជ្រ</title>
+
+  <meta name="description" content="Prewedding Management System">
+  <meta name="keywords" content="Prewedding Management System">
+  <meta name="author" content="Leang Phalla">
+  <script src="https://library.cinemagickh.com/assets/js/jquery/jquery.min.js"></script>
+  <link href="https://library.cinemagickh.com/assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional Bootstrap JS -->
+  <script src="https://library.cinemagickh.com/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://library.cinemagickh.com/assets/js/carousel.js"  defer ></script>
+  <link href="https://library.cinemagickh.com/assets/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+  <link href="https://library.cinemagickh.com/assets/css/aos.css" rel="stylesheet">
+  <link href="https://library.cinemagickh.com/assets/css/tailwindcss.css" rel="stylesheet">
+  <link href="https://library.cinemagickh.com/assets/fonts/khmer/khmer.css" rel="stylesheet" type="text/css">
+  <link href="https://library.cinemagickh.com/assets/fonts/khmer/font_khmer.css" rel="stylesheet" type="text/css">
+  <link href="https://library.cinemagickh.com/assets/css/carousel.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="./image/BG.jpg">
+
+
+</head>
+<style>
+  /* Scroll Smooth */
+  body {
+    scroll-behavior: smooth;
+  }
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  @keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (6*300px)));
+  }
+}
+
+ /* input font */
+
+ .font_moulpali{
+   font-family: 'Moulpali';
+   font-weight: 200;
+ }
+ .font_suwannaphum{
+  font-family: 'Suwannaphum';
+  font-weight: 200;
+ }
+  .font_slekret{
+    font-family: 'slekret';
+    font-weight: 200;
+  }
+  .font_moul_light{
+    font-family: 'Khmer Os Muol Light';
+    font-weight: 200;
+  }
+
+/* @media only screen and (max-width: 768px) {
+  .container .carousel-items {
+    animation: carouselAnim 60s infinite alternate linear;
+  }
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (5*300px)));
+    }
+  }
+} */
+.hero{
+  overflow: hidden;
+}
+.hero .hero-content {
+      overflow: hidden  ;
+    }
+    .heart {
+      position: absolute;
+      border-radius: 50%;
+      animation: floatUp 6s infinite ease-in-out;
+      opacity: 0.7;
+      filter: blur(0.5px); /* Slight blur for softness */
+    }
+
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .heart::before {
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+
+  .heart::after {
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.6);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(60vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+    opacity: 0;
+  }
+}
+.animation-heart{
+      color:#e75858;
+      animation: heart 1s infinite;
+    }
+
+    @keyframes heart{
+      0%{
+        color: #e75858;
+      }
+      50%{
+        color: rgb(224, 138, 138);
+      }
+      100%{
+        color: #e75858;
+      }
+    }
+    .custom-gradient {
+      background: linear-gradient(
+        to bottom,
+        #ffffff, /* White */
+        #b0b0b0  /* Gray */
+      );
+    }
+
+
+/* .carousel-focus:hover {
+  transition: all 0.8s;
+  transform: scale(1.1);
+} */
+.hidden {
+    visibility: hidden;
+    transform: translateY(100%);
+}
+.animate-in {
+    visibility: visible;
+    transform: translateY(0); /* Slide into view */
+    animation: slideIn 0.5s ease forwards;
+}
+
+.animate-out {
+    animation: slideOut 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.section-main {
+    background-image: url("./image/BG.jpg");
+    background-size: cover;
+}
+/* backgrcound slideshow */
+
+
+</style>
+<body class="bg-gray-100 font_suwannaphum">
+  <!-- Hero Section -->
+  <section class="relative md:h-screen lg:h-screen 2xl:h-screen xl:h-screen sm:h-auto bg-contain bg-center hero p-2 z-0 section-main">
+    <div class="hearts-container"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay -->
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white md:space-y-10 lg:space-y-12 space-y-4">
+      <h1 class="lg:text-3xl font-extrabold font_moulpali md:text-3xl sm:text-3xl text-2xl mt-1">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+      <div class="space-x-4">
+        <!-- grandient -->
+        <p class="bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent lg:text-3xl text-2xl font_moul_light md:text-2xl sm:text-2xl py-2">គង់ រតនា & សឿង ស្រីពេជ្រ</p>
+        <p class="text-xl mt-2" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50">សូមគោរពអញ្ជើញ</p>
+      </div>
+            <div class="items-center text-white px-6 py-4 rounded-2xl" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="55"
+      data-aos-easing="ease-in-out"  data-aos-delay="50" style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+        <p class="text-md md:text-lg lg:text-lg m-0">ថ្ងៃXXX XXកើត ខែXX ឆ្នាំXX ឆស័ក ព.ស. XXXX </p>
+        <p class="text-md md:text-lg lg:text-lg  m-0">ថ្ងៃទីXX ខែXX ឆ្នាំXXXX វេលាម៉ោង ០៥:០០ នាទីល្ងាច</p>
+        <p class="text-md md:text-lg  lg:text-lg m-0">ស្ថិតនៅគេហដ្ឋានខាងស្រី ភូមិដូនអៀត ឃុំរការកោះ ស្រុកគងពិសី ខេត្តកំពង់ស្ពឺ ដោយមេត្រីភាព។ </p>
+      </div>
+      <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-4 lg:space-x-8 mt-6" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="58"
+      data-aos-easing="ease-in-out"  data-aos-delay="50">
+        <div class="time-box flex flex-col items-center text-white px-6 py-2 rounded-lg z-20" style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <span class="time text-lg md:text-xl lg:text-4xl  font-extrabold" id="days">00</span>
+          <span class="label text-md md:text-md lg:text-lg">ថ្ងៃ</span>
+        </div>
+        <div class="time-box flex flex-col items-center text-white px-6 py-2 rounded-lg z-20" style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <span class="time text-lg md:text-xl lg:text-4xl font-extrabold" id="hours">00</span>
+          <span class="label text-md md:text-md lg:text-lg">ម៉ោង</span>
+        </div>
+        <div class="time-box flex flex-col items-center text-white  px-6 py-2 rounded-lg z-20" style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <span class="time text-lg md:text-xl lg:text-4xl font-extrabold" id="minutes">00</span>
+          <span class="label text-md md:text-md lg:text-lg">នាទី</span>
+        </div>
+        <div class="time-box flex flex-col items-center text-white px-6 py-2 rounded-lg z-20" style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <span class="time text-lg md:text-xl lg:text-4xl font-extrabold" id="seconds">00</span>
+          <span class="label text-md md:text-md lg:text-lg">វិនាទី</span>
+        </div>
+      </div>
+
+
+  </section>
+
+  <!-- Main Content -->
+  
+    <!-- Couple Profile Section  bg-gradient-to-b from-white-->
+     
+    <section class="absolute inset-0 backdrop-blur-sm py-20 px-4  to-white custom-gradient  relative scroll-smooth">
+      <h3 class="text-2xl md:text-3xl sm:text-md lg:text-3xlfont-bold text-gray-700 text-center text-pink-500 relative font_moulpali">
+        សិរីមង្គលអាពាហ៍ពិពាហ៍
+        <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent" style="left: 50%; transform: translateX(-50%);"></div>
+      </h3>
+
+      <p class="text-center text-gray-800 mt-4 text-md lg:text-lg md:text-lg">យើងខ្ញុំមានកត្តិយសសូមគោរពអញ្ជើញ</p>
+      <div class="flex justify-center bg-white p-4 mt-8 max-w-4xl mx-auto p-6 rounded-2xl bg-white/50 backdrop-blur-sm shadow-lg" data-aos="fade-down" data-aos-duration="500"  data-aos-delay="50"
+      data-aos-easing="ease-in-out"  data-aos-delay="50">
+        <p class="text-center text-md md:text-lg  lg:text-lg">សម្តេច ទ្រង់ ឯកឧត្តម អ្នកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាង កញ្ញា ចូលរួមជាអធិបតី និង ជាភ្ញៀវកិត្តិយសដើម្បីប្រសិទ្ធិពរជ័យ <span class="font-bold text-pink-500 text-md md:text-lg  lg:text-lg">សិរីមង្គល ក្នុងពិធីរៀបអាពាហ៍ពិពាហ៍ កូនប្រុស-កូនស្រី</span>  របស់យើងខ្ញុំទាំងពីរ។</p>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center items-center mt-8 gap-8 align-items-center space-x-0 lg:space-x-10 md:space-x-10 sm:space-x-0">
+
+        <div class="text-center" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50">
+        <p class="text-gray-500 mt-2">
+          កូនប្រុសនាម
+        </p>
+          <h4 class="text-2xl font-bold text-pink-500 my-2 font_moul_light">គង់ រតនា</h4>
+          <div class="w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 mx-auto shadow-[0_0_15px_rgba(255,105,135,0.5)]" style="box-shadow:0 0 10px 2px #F6F7F2">
+            <img src="./image/Me.jpg"
+                 alt="Groom"
+                 class="w-full h-full rounded-full object-cover">
+          </div>
+
+        </div>
+        <div class="text-center" data-aos="zoom-in-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50">
+          <i class="fas fa-heart text-4xl animation-heart"></i>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50">
+        <p class="text-gray-500 mt-2">
+          កូនស្រីនាម
+        </p>
+          <h4 class="text-2xl font-bold text-pink-500 my-2 font_moul_light"> សឿង ស្រីពេជ្រ</h4>
+
+          <div class="w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 mx-auto shadow-[0_0_15px_rgba(255,105,135,0.5)]" style="box-shadow:0 0 10px 2px #F6F7F2">
+            <img src="./image/Bb.jpg"
+                 alt="Groom"
+                 class="w-full h-full rounded-full object-cover ">
+          </div>
+
+
+        </div>
+      </div>
+      <div class="flex justify-center bg-white p-4 mt-8 max-w-4xl mx-auto p-6 rounded-2xl bg-white/50 backdrop-blur-sm shadow-lg" data-aos="fade-up" data-aos-duration="600"  data-aos-delay="50"
+      data-aos-easing="ease-in-out"  data-aos-delay="60">
+        <p class="text-center text-md md:text-lg  lg:text-lg">និង ពិសាភោជនាហារ ដែលនឹងប្រព្រឹត្តទៅនៅ <span class="font-bold text-pink-500 text-md md:text-lg  lg:text-lg">ថ្ងៃxx ទីxx ខែxx ឆ្នាំxxxx </span>
+
+          ត្រូវនឹងថ្ងៃ xxកើត ខែxx ឆ្នាំxx ឆស័ក ពុទ្ធសករាជ xxxx វេលាម៉ោង  <span class="font-bold text-md md:text-lg  lg:text-lg text-pink-500" >០៥:០០ នាទីល្ងាច</span>
+
+          ស្ថិតនៅគេហដ្ឋានខាងស្រី <span class="font-bold text-md md:text-lg  lg:text-lg text-pink-500" >ភូមិដូនអៀត ឃុំរការកោះ ស្រុកគងពិសី ខេត្តកំពង់ស្ពឺ </span> ដោយមេត្រីភាព។
+
+          សូមអរគុណ!</p>
+      </div>
+    </section>
+    </div>
+    <div class="flex justify-center items-center mt-8">
+      <div class="text-white  bg-white px-6 py-4 rounded-lg justify-center items-center shadow-lg max-w-max" data-aos="zoom-in-up">
+        <h3 class="text-xl md:text-3xl lg:text-3xl font-bold text-gray-700 text-center text-pink-500 relative font_moulpali">
+          កម្រងរូបភាពអនុស្សាវរីយ៍
+          <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent" style="left: 50%; transform: translateX(-50%);"></div>
+        </h3>
+      </div>
+      </div>
+
+      <div class="container mx-auto w-full overflow-hidden relative my-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1">
+            <div class="carousel-focus flex items-center flex-col relative bg-white mx-5"
+                style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img class="h-auto w-full" src="./image/IMG1jpg.jpg" alt="Img" style="display: block; object-fit: cover; height: 100%; width: 100%;">
+            </div>
+            
+            <div class="carousel-focus flex items-center flex-col relative bg-white mx-5"
+                style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 10px 2px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img class="h-auto w-full" src="./image/IMG5.jpg" alt="Img" style="display: block; object-fit: cover; height: 100%; width: 100%;">
+            </div>
+            <div class="carousel-focus flex items-center flex-col relative bg-white mx-5"
+                style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img class="h-auto w-full" src="./image/IMG3.jpg" alt="Img" style="display: block; object-fit: cover; height: 100%; width: 100%;">
+            </div>
+            <div class="carousel-focus flex items-center flex-col relative bg-white mx-5"
+            style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <img class="h-auto w-full" src="./image/IMG4.jpg" alt="Img" style="display: block; object-fit: cover; height: 100%; width: 100%;">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="custom-gradient bg-opacity-50 h-full py-10 px-2">
+      <h3 class="text-xl lg:text-3xl md:text-3xl font-bold text-gray-700 text-center text-pink-500  font_moulpali" data-aos="zoom-in-down" data-aos-duration="500"  data-aos-delay="50">
+        ទីតាំងកម្មវិធី
+        <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+      </h3>
+      <div class="mt-10 my-10 max-w-2xl mx-auto p-2 md:p-0 lg:p-0" data-aos="zoom-in-up" data-aos-duration="500"  data-aos-delay="50">
+          <div class="bg-white p-4 rounded-2xl shadow-lg">
+            <p class="text-center text-md md:text-lg  lg:text-lg">ស្ថិតនៅគេហដ្ឋានខាងស្រី  <span class="font-bold text-pink-500" >ភូមិដូនអៀត ឃុំរការកោះ ស្រុកគងពិសី ខេត្តកំពង់ស្ពឺ</span> </p>
+          </div>
+      </div>
+      <div class="flex justify-center items-center py-2">
+        <a class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full" href="https://www.google.com/maps/place/Soeung+Sreypich/@11.4063787,104.6683318,19.96z/data=!4m6!3m5!1s0x310941005a934af5:0xb8b3b5a1bdb1e582!8m2!3d11.4063635!4d104.6686309!16s%2Fg%2F11vqz6rgh8!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        ស្វែងរកទីតាំងកម្មវិធី  <i class="fas fa-map-marker-alt animate-bounce text-white-600"></i>
+        </a>
+    </div>
+      <div class="w-full max-w-4xl mx-auto p-1 rounded-lg shadow-lg bg-white " data-aos="zoom-in-up" data-aos-duration="500"  data-aos-delay="50">
+        
+
+        <a href="https://www.google.com/maps/place/Soeung+Sreypich/@11.4063787,104.6683318,19.96z/data=!4m6!3m5!1s0x310941005a934af5:0xb8b3b5a1bdb1e582!8m2!3d11.4063635!4d104.6686309!16s%2Fg%2F11vqz6rgh8!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+            <image src="./image/map.png" alt="map" class="w-full transition-all duration-500 hover:brightness-105 cursor-pointer" style="border: 0px;">
+        </a>
+    </div>
+    
+
+      
+      <div class="flex justify-center flex-col items-center my-6 space-y-4" data-aos="zoom-in-up" data-aos-duration="500"  data-aos-delay="50">
+        <div class="flex flex-col bg-white items-center max-w-max p-10 rounded-lg shadow-lg space-y-10 mt-10">
+            <p class="text-center">ទីតាំងកម្មវិធី <i class="fas fa-map-marker-alt animate-bounce text-red-600"></i>  </p>
+            <canvas id="qrcodeCanvas"></canvas>
+            <p class="text-center">សូម Scan QR Code ស្កេនដើម្បីបើកផែនទី</p>
+           </div>
+
+
+        </div>
+    </div>
+     <div class="min-h-screen  relative bg-contain bg-center align-items-center" style="background-image: url(./image/BG.jpg);  background-repeat: no-repeat, repeat">
+
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <br>
+      <div class="flex justify-center items-center mt-8 flex-col p-2 md:p-0 lg:p-0">
+        <div class="py-10 mt-8 max-w-4xl mx-auto p-6 rounded-2xl shadow-lg space-y-8 " data-aos="fade-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50"  style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <h3 class="text-center text-orange-700  text-lg md:text-2xl  lg:text-2xl font-bold text-pink-500 relative">លិខិតសូមថ្លែងអំណរគុណ
+            <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+          </h3>
+          <p class="text-md md:text-lg lg:text-lg leading-relaxed text-white text-center">សូមថ្លែងអំណរគុណយ៉ាងជ្រាលជ្រៅ​ ចំពោះការអញ្ចើញចូលរួមជាអធិបតី និងជាភ្ញៀវកិត្តិយសក្នុងពិធីរៀបអាពាហ៍ពិពាហ៍ កូនប្រុស កូនស្រីរបស់យើងខ្ញុំ។ យើងខ្ញុំសូមគោរពជូនពរដល់ភ្ញៀវកិត្តិយសទាំងអស់ សូមប្រកបតែភាពសុខដុមរមនា ចម្រុងចម្រើន និងសុភមង្គលក្នុងក្រុមគ្រួសារជានិច្ចនិរន្តរ៍។</p>
+          <div class="absolute -bottom-8 left-0 right-0  flex justify-center items-center">
+            <i class="fas fa-hand-holding-heart text-4xl animate-bounce text-pink-500" style="font-size:35px"></i>
+          </div>
+        </div>
+        <div class="mt-10 max-w-4xl mx-auto p-6 py-10 rounded-2xl shadow-lg space-y-8" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="50"
+        data-aos-easing="ease-in-out"  data-aos-delay="50"  style="background: rgba(255, 255, 255, 0.2);  backdrop-filter: blur(10px);">
+          <h3 class="text-center text-orange-700  text-lg md:text-2xl  lg:text-2xl font-bold text-pink-500 relative">លិខិតសូមអភ័យទោស
+            <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+          </h3>
+          <p class="text-center text-md md:text-lg lg:text-lg leading-relaxed text-white">ខ្ញុំបាទ នាងខ្ញុំ ជាមាតាបិតាកូនប្រុស-ស្រី សូមខន្តី អភ័យទោសពីសំណាក់ សម្តេច ទ្រង់ ឯកឧត្តម លោកជំទាវ អ្នកឧញ៉ា ឧកញ៉ា លោក លោកស្រី អ្នកនាង កញ្ញា និងភ្ញៀវកិត្តិយសទាំងអស់ ដោយពុំបានជូនលិខិតអញ្ជើញ ដោយផ្ទាល់ដៃ ឬចំពោះកំហុសអក្ខរាវិរុទ្ធ ក្នុងការសរសេរឈ្មោះពុំបានត្រឹមត្រូវ។ សូមមេត្តា យោគយល់ពីក្រុមគ្រួសារយើងខ្ញុំ និងសូមគោរពអរគុណ ទុកជាមុន។</p>
+
+            <div class="absolute -bottom-8 left-0 right-0  flex justify-center items-center">
+              <i class="fas fa-heart animate-bounce text-pink-500" style=" font-size:35px"></i>
+            </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+
+  <footer class="custom-gradient text-dark text-center py-4 mx-auto px-4">
+    <p class="mb-0">
+      ស្នេហ៍ជានិរត្តន៍​
+      <span class="text-yellow-700 font-bold font_moul_light">រតនា</span>
+      <i class="fas fa-heart animation-heart"></i>
+      <span class="text-pink-500 font-bold font_moul_light">ស្រីពេជ្រ</span>
+    </p>
+  </footer>
+  
+  <div class="fixed inset-0 z-50 hidden transition-transform duration-300 ease-in-out off-canvas bg-black bg-opacity-50" id="offCanvas">
+    <div class="fixed inset-x-0 bottom-0 w-full overflow-y-auto custom-gradient shadow-lg" style="height: 94vh;">
+
+        <!-- Close Button -->
+        <div class="flex justify-end p-4">
+            <button
+            class="bg-pink-400 text-white rounded-full w-10 h-10 flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-pink-500"
+            onclick="offCanvas()"
+          >
+            <svg
+              focusable="false"
+              data-icon="close"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              aria-hidden="true"
+              fill-rule="evenodd"
+              viewBox="64 64 896 896"
+            >
+              <path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path>
+            </svg>
+          </button>
+
+
+        </div>
+
+        <!-- Header -->
+        <h3 class="text-md font-bold text-pink-500 text-center md:text-md lg:text-lg sm:text-md font_moulpali relative">
+           <span> សម្រាប់ចំណងដៃតាមរយៈកុងរបស់ពួកយើងទាំងពី​រ <i class="fas fa-money-check-alt"></i>
+           </span>
+           <div class="absolute -bottom-2 w-48 h-1 bg-gradient-to-r from-transparent via-gray-500 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+        </h3>
+        <hr class="my-4 border-gray-400">
+        <!-- Content -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 p-4">
+            <!-- Groom Card -->
+            <div class="text-center space-y-4">
+                <h4 class="text-gray-500 mb-2 text-pink-500 relative font-extrabold">KONG ROTANA
+                    <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+                </h4>
+                <div class="bg-white rounded-lg shadow-md p-4" style="box-shadow: 0 0 10px 1px #F6F7F2">
+                    <img
+                        src="./image/RTN.jpg"
+                        alt="Groom"
+                        class="rounded-lg w-48 h-60 object-cover">
+                </div>
+                
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="./image/RTN.jpg" download="Leang Phalla" class="bg-pink-500 hover:bg-pink-700 text-white py-2 px-2 rounded-full">
+                      <span class="flex">
+                      <svg id="arrow" class="w-4 h-4 transition-all group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                      </svg> <span class="text-md"> ទាញយករូបភាព </span>
+                    </span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bride Card -->
+            <div class="text-center space-y-4">
+                <h4 class="text-gray-500 mb-2 font-extrabold text-pink-500 relative">
+                    SOEUNG SREYPICH
+                    <div class="absolute -bottom-2 w-24 h-1 bg-gradient-to-r from-transparent via-pink-300 to-transparent"  style="left: 50%; transform: translateX(-50%);"></div>
+                </h4>
+                <div class="bg-white rounded-lg shadow-md p-4" style="box-shadow: 0 0 10px 1px #F6F7F2">
+                    <img
+                        src="./image/BBQR.jpg"
+                        alt="Bride"
+                        class="rounded-lg w-48 h-60 object-cover">
+                </div>
+                
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="./image/BBQR.jpg" download="Lot Daly" class="bg-pink-500 hover:bg-pink-700 text-white py-2 px-2 rounded-full">
+                      <span class="flex">
+                      <svg id="arrow" class="w-4 h-4 transition-all group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                      </svg>
+                       <span class="text-md"> ទាញយករូបភាព </span>
+                    </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-gray-700 text-lg"> សូមអរគុណ!</p>
+    </div>
+</div>
+  
+  <div>
+    <button class="fixed right-2 p-2 bg-white text-pink-700 rounded-xl shadow-sm backdrop-blur-lg transition-all hover:shadow-xl group z-50" onclick="offCanvas()" id="myBtnOff" style="bottom: 51px"><i class="fas fa-gift text-pink-500 animate-pulse"></i> <span class="font_suwannaphum text-md">គូរស្នេហ៍ </span></button>
+    <button class="fixed bottom-24 right-4 p-2 bg-yellow-500 hover:bg-yellow-600/80 text-white rounded-full shadow-lg backdrop-blur-sm transition-all hover:shadow-xl group z-50" onclick="topFunction()" id="myBtn"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-300 group-hover:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg></button>
+  </div>
+
+  <script src="https://library.cinemagickh.com/assets/js/aos.js"></script>
+  <script src="https://library.cinemagickh.com/assets/js/qrcode.min.js"></script>
+  <!-- Countdown Script -->
+  <script>
+     AOS.init();
+     var qrText = "https://www.google.com/maps/place/Soeung+Sreypich/@11.4063787,104.6683318,19.96z/data=!4m6!3m5!1s0x310941005a934af5:0xb8b3b5a1bdb1e582!8m2!3d11.4063635!4d104.6686309!16s%2Fg%2F11vqz6rgh8!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D";
+        QRCode.toCanvas(document.getElementById('qrcodeCanvas'), qrText, {
+        width: 200,  // Width of the QR code
+        margin: 2,   // Margin around the QR code
+        color: {
+        dark: "#000000",  // Dark color of the QR code
+        light: "#ffffff", // Light color of the QR code background
+        },
+    }, function (error) {
+         if (error) console.error(error);
+
+    });
+    $(document).ready(function() {
+      // Countdown Timer
+      const weddingDate = new Date("2030-02-09T00:00:00");
+        function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        $('#days').text(days);
+        $('#hours').text(hours);
+        $('#minutes').text(minutes);
+        $('#seconds').text(seconds);
+        }
+        setInterval(updateCountdown, 1000);
+
+
+
+    });
+  </script>
+    <script>
+   let mybutton = document.getElementById("myBtn");
+    let mybuttonOff = document.getElementById("myBtnOff");
+
+      // Show the button when the user scrolls down 20px
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+          mybuttonOff.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+          mybuttonOff.style.display = "none";
+        }
+      }
+
+      // Scroll to the top when the button is clicked (smooth handled by CSS)
+      function topFunction() {
+        document.documentElement.scrollTop = 0; // This triggers the smooth scroll due to CSS
+      }
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+      const heartsContainer = document.querySelector(".hearts-container");
+
+      function getRandomColor() {
+        const colors = ['#ff6b81', '#ff9a9e', '#fad0c4', '#ffc3a0', 'rgb(236 72 162)'];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+
+      // Adjusted size for very small hearts (1px to 8px)
+      const size = Math.random() * 5 + 3; // Random size between 3px and 8px
+      heart.style.width = `${size}px`;
+      heart.style.height = `${size}px`;
+      heart.style.left = `${Math.random() * 100}%`; // Random horizontal position
+      heart.style.backgroundColor = getRandomColor(); // Assign a random color
+      heart.style.animationDuration = `${Math.random() * 7 + 8}s`; // Slower animation duration (8–15s)
+      heart.style.animationTimingFunction = "cubic-bezier(0.42, 0, 0.58, 1)"; // Custom smooth easing
+
+      heartsContainer.appendChild(heart);
+
+      // Remove heart after animation ends
+      setTimeout(() => {
+        heart.remove();
+      }, 15000); // Match the maximum animation duration
+    }
+
+    // Generate hearts at intervals
+    setInterval(createHeart, 200); // Slower heart generation interval
+  });
+
+        function offCanvas() {
+            const offCanvas = document.querySelector('.off-canvas');
+            const isHidden = offCanvas.classList.contains('hidden');
+            const mybutton1 = document.getElementById("myBtn");
+            const myBtnOff1 = document.getElementById("myBtnOff");
+
+            if (isHidden) {
+                offCanvas.classList.remove('hidden');
+                myBtnOff1.classList.remove('z-50');
+                mybutton1.classList.remove('z-50');
+                offCanvas.classList.add('animate-in');
+                document.body.style.overflow = 'hidden';
+
+                // Remove the animation class after the animation ends
+                offCanvas.addEventListener(
+                    'animationend',
+                    () => {
+                        offCanvas.classList.remove('animate-in');
+                    },
+                    { once: true } // Ensure the listener is removed after the first trigger
+                );
+            } else {
+                offCanvas.classList.add('animate-out');
+                myBtnOff1.classList.add('z-50');
+                mybutton1.classList.add('z-50');
+                offCanvas.addEventListener(
+                    'animationend',
+                    () => {
+                        offCanvas.classList.add('hidden');
+                        offCanvas.classList.remove('animate-out');
+                        document.body.style.overflow = 'auto'; // Enable scrolling
+
+                    },
+                    { once: true }
+                );
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
